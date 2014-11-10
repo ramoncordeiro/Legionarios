@@ -33,6 +33,7 @@ public class Personagem {
     private String familia;//cada personagem pertence a uma gens Romana que no Jogo chama-se familia.
     private int arma[] = new int[3]; //Personagem terá 3 armas distintas 1 principal e 2 secundárias.
     
+    
     //Construtor da Classe
     //ANALISAR SE POSSO UTILIZAR O SET DENTRO DO CONSTRUTOR
     public Personagem(int id, String nome, int saude, String familia) {
@@ -40,6 +41,7 @@ public class Personagem {
         setNome(nome);
         setSaude(saude);
         setFamilia(familia);
+        print();
         //this.id = id;
         //this.nome = nome;
         //this.saude = saude;
@@ -164,9 +166,14 @@ public class Personagem {
         return saude;
     }
 
-    
-    
-  
+       
+    final void print(){
+        System.out.println("Personagem Criado com Sucesso\n");
+        getId();
+        getNome();
+        getSaude();
+        getFamilia();
+    }
     
     
 }//finaliza classe personagem

@@ -7,12 +7,12 @@ Requisitos de implementação
 3. Cinco classes: uma superclasse e duas subclasses, e duas classes relacionadas ao projeto
 4. Sempre usar o super para o máximo de reaproveitamento de código
 5. Diagrama de classes (obrigatório salvar também o png do diagrama no gitHub) 
-6. Todos os atributos devem ser inicializados. Fez validação de dados?
-7. Dois construtores
-8. Um atributo static. 
+6. Todos os atributos devem ser inicializados. Fez validação de dados? X
+7. Dois construtores X 
+8. Um atributo static. X
 9. Um atributo const static
 Correta modelagem dos statics?
-10. Um array
+10. Um array X
 11. Método static – deve ser chamado no main
 12. Sobrescrita de método: chamar dentro do método da classe. Usar o @override
 13. Usar Protected acessando diretamente os atributos na classe derivada
@@ -26,23 +26,27 @@ package legionarios_program;
 
 public class Personagem {
    //LEMBRAR DE INSERIR OU CORRIRIR ALGUMAS VARIAVEIS PARA STATIC.
-    
+    //FAZER SOBRESCRITA NO SET NOME E SET ARMA.
     private int id; //cada personagem terá um identifiador para diferencia-lo de outros da mesma classe.
-    private String nome; //nome da classe do personagem,na classe derivada será inserido este atributo.
+    private static String nome; //nome da classe do personagem,na classe derivada será inserido este atributo.
     private int saude; //indica se personagem está ou não ferido (0% - 100%); 
     private String familia;//cada personagem pertence a uma gens Romana que no Jogo chama-se familia.
-
+    private int arma[] = new int[3]; //Personagem terá 3 armas distintas 1 principal e 2 secundárias.
     
     //Construtor da Classe
-    //ANALISAR SE POSSO UTILIZAR O GET DENTRO DO CONSTRUTOR
+    //ANALISAR SE POSSO UTILIZAR O SET DENTRO DO CONSTRUTOR
     public Personagem(int id, String nome, int saude, String familia) {
-        this.id = id;
-        this.nome = nome;
-        this.saude = saude;
-        this.familia = familia;
+        setId(id);
+        setNome(nome);
+        setSaude(saude);
+        setFamilia(familia);
+        //this.id = id;
+        //this.nome = nome;
+        //this.saude = saude;
+        //this.familia = familia;
     }
     
-    //Construtor 
+    //Construtor DEFAULT.ANLISAR SE PRECISA CORRIGIR
     public Personagem() {
         this.id = 0;
         this.nome = "";
@@ -125,6 +129,20 @@ public class Personagem {
     public void setSaude(int saude) {
         this.saude = saude;
     }
+    
+    /**
+     * @return the arma
+     */
+    public int[] getArma() {
+        return arma;
+    }
+
+    /**
+     * @param arma the arma to set
+     */
+    public void setArma(int[] arma) {
+        this.arma = arma;
+    }
 
     
     
@@ -145,6 +163,8 @@ public class Personagem {
         }
         return saude;
     }
+
+    
     
   
     

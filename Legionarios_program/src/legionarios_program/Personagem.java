@@ -1,7 +1,7 @@
 /*Todos os atributos e funções membros devem estar relacionados a classe
   
 1. Pelo menos 4 atributos x
-2. Pelo menos 4 funções membros sem incluir get e set
+2. Pelo menos 4 funções membros sem incluir get e set X 
 
 Requisitos de implementação
 3. Cinco classes: uma superclasse e duas subclasses, e duas classes relacionadas ao projeto
@@ -10,7 +10,7 @@ Requisitos de implementação
 6. Todos os atributos devem ser inicializados. Fez validação de dados? X
 7. Dois construtores X 
 8. Um atributo static. X
-9. Um atributo const static
+9. Um atributo const static X
 Correta modelagem dos statics?
 10. Um array X
 11. Método static – deve ser chamado no main
@@ -25,14 +25,15 @@ package legionarios_program;
 
 
 public class Personagem {
+
+    
    //LEMBRAR DE INSERIR OU CORRIRIR ALGUMAS VARIAVEIS PARA STATIC.
     //FAZER SOBRESCRITA NO SET NOME E SET ARMA.
     private int id; //cada personagem terá um identifiador para diferencia-lo de outros da mesma classe.
     private static String nome; //nome da classe do personagem,na classe derivada será inserido este atributo.
     private int saude; //indica se personagem está ou não ferido (0% - 100%); 
-    private String familia;//cada personagem pertence a uma gens Romana que no Jogo chama-se familia.
     private int arma[] = new int[3]; //Personagem terá 3 armas distintas 1 principal e 2 secundárias.
-    
+    private static final int forcaMaxima=100; //cada personagem terá uma força que chegará até 100 pts.
     
     //Construtor da Classe
     //ANALISAR SE POSSO UTILIZAR O SET DENTRO DO CONSTRUTOR
@@ -40,7 +41,6 @@ public class Personagem {
         setId(id);
         setNome(nome);
         setSaude(saude);
-        setFamilia(familia);
         print();
         //this.id = id;
         //this.nome = nome;
@@ -53,27 +53,13 @@ public class Personagem {
         this.id = 0;
         this.nome = "";
         this.saude = 100;
-        this.familia = "";
+        print();
     }
     
     
-   
-    
-
-    
-
-   
-
-//CONSTRUTOR
-    /*public Personagem(int id,String nome,int saude,String familia){
-        getId();
-        getNome();
-        getSaude();
-        
-    }*/
-    
-    
 //----------------------DECLARAÇÃO DOS METODOS GET E SET DOS ATRIBUTOS.------------------------
+    
+    
     /**
      * @return the id
      */
@@ -89,20 +75,7 @@ public class Personagem {
         this.id = id;
     }
 
-    /**
-     * @return the familia
-     */
-    public String getFamilia() {
-        return familia;
-    }
-
-    /**
-     * @param familia the familia to set
-     */
-    public void setFamilia(String familia) {
-        System.out.println("Insira a Familia ");
-        this.familia = familia;
-    }
+    
 
     /**
      * @return the nome
@@ -146,7 +119,12 @@ public class Personagem {
         this.arma = arma;
     }
 
-    
+    /**
+     * @return the forcaMaxima
+     */
+    public static int getForcaMaxima() {
+        return forcaMaxima;
+    }
     
     // --------------------------- DECLARAÇÃO DOS MÉTODOS DA CLASSE ---------------------------------
     
@@ -160,9 +138,6 @@ public class Personagem {
     
     public int reduzirSaude(int saude){
         saude = saude - 10;
-        if(saude<=30){
-            System.out.println("Atencao! Personagem está em perigo de vida "+saude);
-        }
         return saude;
     }
 
@@ -172,8 +147,15 @@ public class Personagem {
         getId();
         getNome();
         getSaude();
-        getFamilia();
     }
     
+    public void checkSaude(int saude){
+    if((saude >10)&&(saude <30)){
+        System.out.println("Personagem em perigo de vida, Por Favor Insira item de Cura");
+        }else    
+        if(saude <= 10){
+            System.out.println("Saude em estado crítico! Leve o personagem a um lugar seguro para usar Item de cura");
+    }
+}
     
 }//finaliza classe personagem

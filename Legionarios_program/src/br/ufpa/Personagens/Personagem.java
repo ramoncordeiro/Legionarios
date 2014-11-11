@@ -21,7 +21,7 @@ Opcionais que garantem pontos extras:
 Trabalhar com ENUM
 Trabalhar com pacotes
 */
-package legionarios_program;
+package br.ufpa.Personagens;
 
 
 public class Personagem {

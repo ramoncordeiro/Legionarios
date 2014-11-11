@@ -1,6 +1,6 @@
 package br.ufpa.classesRelacionadas;
 
-import legionarios_program.Personagem;
+import br.ufpa.Personagens.Personagem;
 
 
 public class Esquadrao {

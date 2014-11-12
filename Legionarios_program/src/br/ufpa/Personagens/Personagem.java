@@ -22,7 +22,7 @@ Trabalhar com ENUM
 Trabalhar com pacotes
 */
 package br.ufpa.Personagens;
-
+import br.ufpa.classesRelacionadas.Item;
 
 public class Personagem {
 
@@ -116,6 +116,7 @@ public class Personagem {
      * @param item the item to set
      */
     public void setItem(int[] item) {
+        
         this.item = item;
     }
 

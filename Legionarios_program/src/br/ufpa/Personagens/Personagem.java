@@ -32,7 +32,7 @@ public class Personagem {
     private int id; //cada personagem terá um identifiador para diferencia-lo de outros da mesma classe.
     private static String nome; //nome da classe do personagem,na classe derivada será inserido este atributo.
     private int saude; //indica se personagem está ou não ferido (0% - 100%); 
-    private int arma[] = new int[3]; //Personagem terá 3 armas distintas 1 principal e 2 secundárias.
+    private int[] item = new int[3]; //Personagem terá 3 armas distintas 1 principal e 2 secundárias.
     private static final int forcaMaxima=100; //cada personagem terá uma força que chegará até 100 pts.
     
     //Construtor da Classe
@@ -106,17 +106,17 @@ public class Personagem {
     }
     
     /**
-     * @return the arma
+     * @return the item
      */
-    public int[] getArma() {
-        return arma;
+    public int[] getItem() {
+        return item;
     }
 
     /**
-     * @param arma the arma to set
+     * @param item the item to set
      */
-    public void setArma(int[] arma) {
-        this.arma = arma;
+    public void setItem(int[] item) {
+        this.item = item;
     }
 
     /**

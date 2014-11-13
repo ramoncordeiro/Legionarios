@@ -65,7 +65,7 @@ public class Esquadrao {
   //------------------------------------- Métodos da Classe ----------------------------------------  
    
     public void addLegionario(){
-         if(qtdLegionarios>=10){
+         if(qtdLegionarios==qtdmaxLegionarios){
             System.out.println("Esquadrão com capacidade máxima!");
             //VERIFICAR A FUNCIONALIDADE DE SYSTEM.EXIT.
             System.exit(qtdLegionarios);

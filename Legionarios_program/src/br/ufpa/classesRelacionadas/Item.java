@@ -2,6 +2,12 @@
 // Se o personagem for um aldeão os Itens serão Machado,inchada,martelo (por exemplo)
 // Se o personagem for um Militar os Itens poderão ser: Espada, adaga, escudo.
 
+/* INSERIR NA HORA DA BUSCA DE ITENS, OU REPENSAR USAR ARRAYLIST
+ for(int=0; i<3;i++){
+    getItens()[i].setItem(null);
+}
+    
+*/
 
 package br.ufpa.classesRelacionadas;
 

@@ -1,3 +1,25 @@
+/* Esta classe é a Classe Base. Nela contém atributos e métodos que todo personagem possui
+indepentemente se este seja militar ou um aldeão.
+    O objetivo desta classe é ter implementado ( para reaproveitamento)
+caracteristicas ( variaveis e metodos ) genéricos para todos os personagens.
+Todos os personagens Possuem : ID (identificador; Nome(Será nome da classe, p.ex : Legionario, aldeao, arqueiro);
+saude ( máx 100), Itens ( para trabalho como um aldeão, ou para guerra como um legionário).
+Também os personagens possuem um atributo força Máxima (100).
+A partir dessa classe será possivel criar Personagens Militares (Arqueiro, legionário, etc..), bem como 
+personagens civis ( caso de aldeões )
+
+*/
+
+
+
+
+
+
+
+
+
+
+
 /*Todos os atributos e funções membros devem estar relacionados a classe
   
 1. Pelo menos 4 atributos x
@@ -26,9 +48,6 @@ import br.ufpa.classesRelacionadas.Item;
 
 public class Personagem {
 
-    
-   //LEMBRAR DE INSERIR OU CORRIRIR ALGUMAS VARIAVEIS PARA STATIC.
-    //FAZER SOBRESCRITA NO SET NOME E SET ARMA.
     private int id; //cada personagem terá um identifiador para diferencia-lo de outros da mesma classe.
     static String nome; //nome da classe do personagem,na classe derivada será inserido este atributo.
     private int saude; //indica se personagem está ou não ferido (0% - 100%); 

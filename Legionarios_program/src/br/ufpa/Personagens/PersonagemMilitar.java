@@ -1,4 +1,8 @@
+/* Classe de Personagens Militares : Definição das caracteristicas essenciais de Personagens guerreiros 
+do jogo. Este tipo de personagem possui atributos como : ataque, defesa, corrida (para caso de recuo ou fuga
+imediata)
 
+*/
 package br.ufpa.Personagens;
 import br.ufpa.classesRelacionadas.Item;
 

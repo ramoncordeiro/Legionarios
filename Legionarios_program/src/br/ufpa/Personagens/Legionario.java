@@ -1,4 +1,6 @@
+/* Classe Principal do Programa 
 
+*/
 package br.ufpa.Personagens;
 
 

@@ -1,13 +1,10 @@
-//Esta é a classe dos itens que cada persoagem terá.
-// Se o personagem for um aldeão os Itens serão Machado,inchada,martelo (por exemplo)
-// Se o personagem for um Militar os Itens poderão ser: Espada, adaga, escudo.
+/*Esta é a classe dos itens que cada personagem terá.
+Os itens são instrumentos que o personagem utiliza para realizar suas tarefas, guerrear ou produzir mantimentos.
+ Se o personagem for um aldeão os Itens serão Machado,inchada,martelo (por exemplo)
+ Se o personagem for um Militar os Itens poderão ser: Espada, adaga, escudo.
 
-/* INSERIR NA HORA DA BUSCA DE ITENS, OU REPENSAR USAR ARRAYLIST
- for(int=0; i<3;i++){
-    getItens()[i].setItem(null);
-}
-    
 */
+
 
 package br.ufpa.classesRelacionadas;
 
@@ -27,13 +24,7 @@ public class Item {
         
     }
 
-    
-
-
-    
-    
-    
-//-------------------------------------------- GETTERS E SETTERS ---------------------------------------    
+  //-------------------------------------------- GETTERS E SETTERS ---------------------------------------    
     
     /**
      * @return the item

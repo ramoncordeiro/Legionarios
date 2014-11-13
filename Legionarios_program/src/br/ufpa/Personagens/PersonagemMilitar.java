@@ -9,15 +9,15 @@ import br.ufpa.classesRelacionadas.Item;
 //FAZER SOBRESCRITA DO tipoAtaque na CLASSE LEGIONARIO;
 //na documentação da Classe especificar que tipoAtaque refere-se H x H, Distancia, espada, arco.
 public class PersonagemMilitar extends Personagem{
-   private int ataque;
-   private int defesa;
-   private int corrida; //define a velocidade de corrida ( pique ) que o personagem consegue atingir.
+   int ataque;
+   int defesa;
+   int corrida; //define a velocidade de corrida ( pique ) que o personagem consegue atingir.
   
 
    
 //-------------------------------------------------Construtores----------------------------------------------------   
-    public PersonagemMilitar(int ataque, int defesa, int corrida, String tipAtaque, int id, String nome, int saude, String familia) {
-        super(id, nome, saude, familia);
+    public PersonagemMilitar(int ataque, int defesa, int corrida,int id, String nome, int saude,Item[] Itens) {
+        super(id, nome, saude, Itens);
         this.ataque = ataque;
         this.defesa = defesa;
         this.corrida = corrida;
@@ -58,7 +58,7 @@ public class PersonagemMilitar extends Personagem{
     }
 
    
-    
+// ------------------------------------------- Sobrescrita----------------------------------------    
     @Override
     public void setNome(String nome){
         nome = "Personagem Militar";

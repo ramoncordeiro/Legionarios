@@ -12,15 +12,8 @@ personagens civis ( caso de aldeões )
 
 
 
-
-
-
-
-
-
-
-
-/*Todos os atributos e funções membros devem estar relacionados a classe
+/* REQUISITOS 
+*Todos os atributos e funções membros devem estar relacionados a classe
   
 1. Pelo menos 4 atributos x
 2. Pelo menos 4 funções membros sem incluir get e set X 
@@ -48,15 +41,15 @@ import br.ufpa.classesRelacionadas.Item;
 
 public class Personagem {
 
-    private int id; //cada personagem terá um identifiador para diferencia-lo de outros da mesma classe.
+    int id; //cada personagem terá um identifiador para diferencia-lo de outros da mesma classe.
     static String nome; //nome da classe do personagem,na classe derivada será inserido este atributo.
-    private int saude; //indica se personagem está ou não ferido (0% - 100%); 
+    int saude; //indica se personagem está ou não ferido (0% - 100%); 
     Item[] Itens; //Personagem terá 3 armas distintas 1 principal e 2 secundárias.
     private static final int forcaMaxima=100; //cada personagem terá uma força que chegará até 100 pts.
     
     //Construtor da Classe
     //ANALISAR SE POSSO UTILIZAR O SET DENTRO DO CONSTRUTOR
-    public Personagem(int id, String nome, int saude, String familia) {
+    public Personagem(int id, String nome, int saude, Item[] Itens) {
         setId(id);
         setNome(nome);
         setSaude(saude);
@@ -170,8 +163,10 @@ public class Personagem {
         return saude;
     }
 
-       
-    final void print(){
+    /**
+     *
+     */
+    public void print(){
         System.out.println("Personagem Criado com Sucesso\n");
         getId();
         getNome();

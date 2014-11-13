@@ -22,7 +22,6 @@ Trabalhar com ENUM
 Trabalhar com pacotes
 */
 package br.ufpa.Personagens;
-import java.util.ArrayList;
 import br.ufpa.classesRelacionadas.Item;
 
 public class Personagem {

@@ -2,13 +2,13 @@
 package br.ufpa.Personagens;
 import br.ufpa.classesRelacionadas.Item;
 
-//FAZER SOBRESCRITA DO tipAtaque na CLASSE LEGIONARIO;
-//na documentação da Classe especificar que tipAtaque refere-se H x H, Distancia, espada, arco.
+//FAZER SOBRESCRITA DO tipoAtaque na CLASSE LEGIONARIO;
+//na documentação da Classe especificar que tipoAtaque refere-se H x H, Distancia, espada, arco.
 public class PersonagemMilitar extends Personagem{
    private int ataque;
    private int defesa;
    private int corrida; //define a velocidade de corrida ( pique ) que o personagem consegue atingir.
-   private String tipAtaque; // Arco e Flexa ou Espada
+  
 
    
 //-------------------------------------------------Construtores----------------------------------------------------   
@@ -17,7 +17,7 @@ public class PersonagemMilitar extends Personagem{
         this.ataque = ataque;
         this.defesa = defesa;
         this.corrida = corrida;
-        this.tipAtaque = tipAtaque;
+        
     }
 
     public PersonagemMilitar() {
@@ -25,7 +25,7 @@ public class PersonagemMilitar extends Personagem{
      this.ataque = 0;
      this.defesa = 0;
      this.corrida = 0;
-     this.tipAtaque = "";
+     
     }
     
 //------------------------------------------GETTERS E SETTERS -----------------------------------------   
@@ -53,19 +53,13 @@ public class PersonagemMilitar extends Personagem{
         this.corrida = corrida;
     }
 
-    public String getTipAtaque() {
-        return tipAtaque;
-    }
-
-    public void setTipAtaque(String tipAtaque) {
-        this.tipAtaque = tipAtaque;
-    }
+   
     
     @Override
     public void setNome(String nome){
         nome = "Personagem Militar";
-        this.nome = nome;
-            System.out.println(this.nome);
+        PersonagemMilitar.nome = nome;
+            System.out.println(PersonagemMilitar.nome);
     }
 
     @Override

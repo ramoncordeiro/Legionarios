@@ -22,6 +22,7 @@ Trabalhar com ENUM
 Trabalhar com pacotes
 */
 package br.ufpa.Personagens;
+import java.util.ArrayList;
 import br.ufpa.classesRelacionadas.Item;
 
 public class Personagem {
@@ -30,7 +31,7 @@ public class Personagem {
    //LEMBRAR DE INSERIR OU CORRIRIR ALGUMAS VARIAVEIS PARA STATIC.
     //FAZER SOBRESCRITA NO SET NOME E SET ARMA.
     private int id; //cada personagem terá um identifiador para diferencia-lo de outros da mesma classe.
-    private static String nome; //nome da classe do personagem,na classe derivada será inserido este atributo.
+    static String nome; //nome da classe do personagem,na classe derivada será inserido este atributo.
     private int saude; //indica se personagem está ou não ferido (0% - 100%); 
     private Item[] Itens; //Personagem terá 3 armas distintas 1 principal e 2 secundárias.
     private static final int forcaMaxima=100; //cada personagem terá uma força que chegará até 100 pts.
@@ -88,7 +89,9 @@ public class Personagem {
      * @param nome the nome to set
      */
     public void setNome(String nome) {
+        nome = "Personagem";
         this.nome = nome;
+        System.out.println(this.nome);
     }
 
     /**
@@ -109,6 +112,9 @@ public class Personagem {
      * @return the Itens
      */
     public Item[] getItens() {
+        for(int i=0;i<3;i++){
+            System.out.println(" "+Itens[i]);
+        }
         return Itens;
     }
 
@@ -119,6 +125,9 @@ public class Personagem {
         this.Itens = new Item[3];
            
         this.Itens = Itens;
+        for(int i=0; i<3;i++){
+            getItens()[i].setItem("Item Default "+i);
+            }
     }
 
     /**
@@ -159,5 +168,14 @@ public class Personagem {
             System.out.println("Saude em estado crítico! Leve o personagem a um lugar seguro para usar Item de cura");
     }
 }
+
+    
+           
+      
+            
+     
+        
+     
+    
     
 }//finaliza classe personagem

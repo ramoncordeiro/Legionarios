@@ -60,7 +60,22 @@ public class PersonagemMilitar extends Personagem{
     public void setTipAtaque(String tipAtaque) {
         this.tipAtaque = tipAtaque;
     }
+    
+    @Override
+    public void setNome(String nome){
+        nome = "Personagem Militar";
+        this.nome = nome;
+            System.out.println(this.nome);
+    }
 
+    @Override
+    public void setItens(Item[] Itens) {
+        super.setItens(Itens); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    
+        
+   
 
 //------------------------------------ METODOS DA CLASSE ----------------------------------------------
 
@@ -84,5 +99,7 @@ public class PersonagemMilitar extends Personagem{
         }
         return getAtaque();
     }
+    
+    
 
 }//fim classe

@@ -17,8 +17,8 @@ public class Item {
     
 //----------------------------------------------Construtor-----------------------------------------------    
     
-    public Item(String item1, String item2, String item3) {
-        this.item = item1;
+    public Item(String item) {
+        this.item = item;
        
     }
 

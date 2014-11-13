@@ -69,8 +69,13 @@ public class PersonagemMilitar extends Personagem{
     }
 
     @Override
-    public void setItens(Item[] Itens) {
-        super.setItens(Itens); //To change body of generated methods, choose Tools | Templates.
+     public void setItens(Item[] Itens) {
+        this.Itens = new Item[3];
+           
+        this.Itens = Itens;
+        for(int i=0; i<3;i++){
+            getItens()[i].setItem("Item Militar "+i);
+            }
     }
 
     
